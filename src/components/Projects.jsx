@@ -1,20 +1,12 @@
-import React from "react";
+import "../css/Project.css";
 
 function Projects() {
   return (
-    <div
-      name="projects"
-      className="w-full h-screen  text-black  bg-[white] pt-20"
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1
-          className="text-4xl font-bold inline-block bg-gradient-to-r from-[#ff1b6b] to-[#45caff] text-transparent bg-clip-text"
-          style={{ paddingBottom: "10px" }}
-        >
-          Projects
-        </h1>
+    <div className="projects">
+      <div className="divclass">
+        <h1>Projects</h1>
       </div>
-      <p className="text-center">
+      <p>
         What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
         and typesetting industry. Lorem Ipsum has been the industry's standard
         dummy text ever since the 1500s, when an unknown printer took a galley

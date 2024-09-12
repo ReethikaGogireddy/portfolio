@@ -1,0 +1,33 @@
+.list {
+  margin-right: 5px;
+}
+button {
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  color: white; /* text-white */
+  font-weight: 600; /* font-semibold */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  border-radius: 9999px; /* rounded-full */
+  background-color: #f64c72; /* bg-[#F64C72] */
+  border-color: white;
+}
+button:hover {
+  background-color: #ff7e51;
+}
+
+.navbar {
+  display: flex; /* flex */
+  flex-direction: row; /* flex-row */
+  justify-content: center; /* justify-center */
+  align-items: center; /* align-center */
+}
+
+nav {
+  margin-top: 15px;
+  position: fixed;
+  display: block;
+  width: 100vw;
+  z-index: 3;
+}

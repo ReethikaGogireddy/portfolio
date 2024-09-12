@@ -1,0 +1,16 @@
+.contact {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, #ff1b6b, #45caff);
+  padding-top: 10px;
+}
+
+.contact h1 {
+  margin-left: 315px;
+  margin-top: 25px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  z-index: 100;
+  color: white;
+  margin-top: 50px;
+}

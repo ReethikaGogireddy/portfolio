@@ -1,0 +1,48 @@
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, #ff1b6b, #45caff);
+  padding-top: 10px;
+}
+.about h1 {
+  margin-left: 315px;
+  margin-top: 25px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  z-index: 100;
+  color: white;
+}
+.aligndiv {
+  margin-top: 25px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  background-color: white;
+  border-radius: 12px;
+  color: black;
+  width: 100%;
+  height: 100vh;
+  margin-left: 50px;
+  max-width: 500px;
+  max-height: 450px;
+  padding: 1.25rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  max-width: 367px;
+  max-height: 367px;
+  margin-right: 100px;
+}

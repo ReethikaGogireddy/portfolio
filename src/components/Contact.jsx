@@ -1,74 +1,73 @@
-import React, { useRef } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import "../css/Contact.css";
 
-function Contact() {
-  const form = useRef();
+const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_id", form.current, "your_publickey").then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    const serviceId = "your_emailjs_service_id";
+    const templateId = "your_emailjs_template_id";
+
+    // Send email using Email.js
+    emailjs
+      .send(serviceId, templateId, { reply_to: email, message, subject })
+      .then((response) => {
+        alert("Email sent successfully!");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Email send failed: ", error);
+      });
   };
   return (
-    <div
-      name="contact"
-      className="w-full h-screen bg-gradient-to-r from-[#ff1b6b] to-[#45caff] pt-10 text-white"
-    >
-      <h1
-        className="text-4xl font-bold text-white text-center"
-        style={{ marginTop: "25px" }}
-      >
-        Contact
-      </h1>
-      <div className="" style={{ marginLeft: "300px", marginTop: "50px" }}>
-        <form ref={form} onSubmit={sendEmail}>
-          <div className="flex flex-col mt-50 justify-center align-middle w-full h-screen  max-w-[500px] max-h-[360px]  ">
-            <div className="flex flex-row ">
-              <label className="text-white btn-primary  rounded-full bg-[#F64C72] w-20 h-10">
-                Name:
-              </label>
-              <input
-                type="text"
-                name="user_name"
-                className="rounded-md w-32 h-10"
-                value={onchange}
-              />
-            </div>
-            <br /> <br />
-            <div className="flex flex-row">
-              <label className=" text-white btn-primary  rounded-full w-20 h-10 align-middle justify-center max-w-[500px] max-h-[360px] bg-white/25 shadow-white">
-                Email:
-              </label>
-              <input
-                type="email"
-                name="user_email"
-                className="rounded-md w-20 h-10 border-solid border-2 border-black "
-              />
-            </div>
-            <br /> <br />
-            <label className="text-white btn-primary  rounded-full  bg-white/25  max-w-[100px] max-h-[35px] align-middle justify-center border-solid border-black ">
-              Message:
-            </label>
-            <textarea
-              name="message"
-              className=" rounded-md w-32 h-10 border-solid border-black "
-            />{" "}
-            <br />
-            <br />
-            <button className="btn-primary  rounded-full bg-white/25  text-white py-1 px-2 w-20 h-10">
-              <input type="submit" value="Send" />
-            </button>
-          </div>
-        </form>
-      </div>
+    <div className="contact">
+      <h1>Contact Us</h1>
+      <form id="justaform" onSubmit={handleSubmit}>
+        <label>
+          Email:
+          <input
+            name="email"
+            className="border border-gray-300 rounded-md p-2 w-full appearance-none"
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="given-email"
+          />
+        </label>
+        <br /> <br />
+        <label>
+          Subject:
+          <input
+            type="text"
+            name="subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            required
+          />
+        </label>
+        <br /> <br />
+        <label>
+          Message:
+          <textarea
+            name="message"
+            type="text"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          ></textarea>
+        </label>
+        <br /> <br />
+        <button type="submit">Send</button>
+      </form>
     </div>
   );
-}
+};
+
 export default Contact;

@@ -1,42 +1,41 @@
 import React from "react";
 import { Link } from "react-scroll";
+import "../css/Navbar.css";
+
 function Navbar() {
   return (
     <header>
-      <nav
-        className="fixed block text-white mt-2 pr-2 w-full h-screen z-40"
-        style={{ marginTop: "15px" }}
-      >
-        <ul className="flex flex-row justify-center align-center ">
-          <li className="mr-5">
-            <button className="btn-primary  rounded-full bg-[#F64C72]">
+      <nav>
+        <div className="navbar">
+          <div className="list">
+            <button>
               <Link to="home" smooth={true} duration={500}>
                 Home
               </Link>
             </button>
-          </li>
-          <li className="mr-5 ">
-            <button className="btn-primary  rounded-full bg-[#F64C72]">
+          </div>
+          <div className="list">
+            <button>
               <Link to="about" smooth={true} duration={500}>
                 About
               </Link>
             </button>
-          </li>
-          <li className="mr-5">
-            <button className="btn-primary  rounded-full bg-[#F64C72]">
+          </div>
+          <div className="list">
+            <button>
               <Link to="projects" smooth={true} duration={500}>
                 Projects
               </Link>
             </button>
-          </li>
-          <li className="mr-5">
-            <button className="btn-primary  rounded-full bg-[#F64C72]">
+          </div>
+          <div className="list">
+            <button>
               <Link to="contact" smooth={true} duration={500}>
                 Contact
               </Link>
             </button>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </header>
   );

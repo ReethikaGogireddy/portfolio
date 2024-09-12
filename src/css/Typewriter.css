@@ -1,0 +1,19 @@
+.myname,
+.text2 {
+  font-weight: 600; /* font-semibold */
+  display: inline-block; /* inline-block */
+  background-image: linear-gradient(
+    to right,
+    #ff1b6b,
+    #45caff
+  ); /* bg-gradient-to-r from-[#ff1b6b] to-[#45caff] */
+  color: transparent; /* text-transparent */
+  -webkit-background-clip: text; /* bg-clip-text */
+  background-clip: text; /* bg-clip-text */
+}
+.myname {
+  font-size: 3rem;
+}
+.text2 {
+  font-size: 2.25rem;
+}

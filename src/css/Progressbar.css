@@ -1,0 +1,10 @@
+.line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px; /* Set the height of the line */
+  background-color: #ff1b6b; /* Set the color of the line */
+  z-index: 9999; /* Ensure the line is above other content */
+  transition: width 0.3s; /* Add a smooth transition effect */
+  box-shadow: 0 2px 4px #ad1a4d; /* Add shadow to the line */
+}

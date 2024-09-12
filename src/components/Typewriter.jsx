@@ -1,5 +1,6 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import "../css/Typewriter.css";
 
 const Typewriter = () => {
   const [text] = useTypewriter({
@@ -9,15 +10,13 @@ const Typewriter = () => {
 
   return (
     <div className="App">
-      <span class="text-5xl inline-block font-semibold  bg-gradient-to-r from-[#ff1b6b] to-[#45caff] text-transparent bg-clip-text">
+      <span className="myname">
         I'm Reethika <br />
       </span>
       <br />
-      <span class="text-4xl  inline-block font-semibold  bg-gradient-to-r from-[#ff1b6b] to-[#45caff] text-transparent bg-clip-text"></span>
+      <span className="text2"></span>
       &nbsp;
-      <span class="text-3xl  inline-block font-semibold bg-gradient-to-r from-[#ff1b6b] to-[#45caff] text-transparent bg-clip-text">
-        {text}
-      </span>
+      <span className="text2">{text}</span>
       <Cursor cursorColor="white" />
     </div>
   );
